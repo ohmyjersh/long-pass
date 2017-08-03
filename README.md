@@ -1,4 +1,4 @@
-# Simple App Rapid Prototyper Kit #
+# Long Pass #
 
 #### Ready ####
 - Install the latest version of node
