@@ -1,0 +1,29 @@
+{
+  "name": "long-pass",
+  "version": "0.1.0",
+  "description": "Generate a random long password",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Flesh this out later. Don't be lazy'",
+    "start": "npm i && node ./index.js",
+    "start:dev": "npm i && nodemon ./index.js",
+    "launch": "chrome http://127.0.0.1:3000/"
+  },
+  "author": "Christian Danielsen",
+  "license": "ISC",
+  "repository": "https://github.com/cdanielsen/long-pass",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.1.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "nodemon": "1.11.0"
+  },
+  "dependencies": {
+    "an-array-of-english-words": "1.2.0",
+    "dotenv": "4.0.0",
+    "express": "4.15.3",
+  }
+}
