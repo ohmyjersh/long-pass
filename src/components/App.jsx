@@ -1,10 +1,12 @@
 import React from 'react'
+import Container from './Container'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 function App (props) {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <MuiThemeProvider>
+      <Container />
+    </MuiThemeProvider>
   )
 }
 
