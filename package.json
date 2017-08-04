@@ -7,8 +7,10 @@
     "test": "echo 'Flesh this out later. Don't be lazy'",
     "start": "node server.js",
     "start:dev": "nodemon server.js",
+    "start:wpack": "npm run wp:server",
     "launch": "chrome http://127.0.0.1:3001/",
-    "wpack": "webpack"
+    "wp": "webpack",
+    "wp:server": "webpack-dev-server"
   },
   "author": "Christian Danielsen",
   "license": "ISC",
@@ -26,13 +28,16 @@
     "eslint-plugin-react": "7.1.0",
     "eslint-plugin-standard": "3.0.1",
     "nodemon": "1.11.0",
-    "webpack": "3.4.1"
+    "react-hot-loader": "3.0.0-beta.7",
+    "webpack": "3.4.1",
+    "webpack-dev-server": "2.6.1"
   },
   "dependencies": {
     "an-array-of-english-words": "1.2.0",
     "dotenv": "4.0.0",
     "express": "4.15.3",
     "material-ui": "0.18.7",
+    "prop-types": "15.5.10",
     "react": "15.6.1",
     "react-dom": "15.6.1",
     "react-tap-event-plugin": "2.0.1"
