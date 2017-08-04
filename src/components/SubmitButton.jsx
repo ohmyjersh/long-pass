@@ -1,9 +1,12 @@
 import React from 'react'
-import FlatButton from 'material-ui/FlatButton'
+import FloatingActionButton from 'material-ui/FloatingActionButton'
+import ContentAdd from 'material-ui/svg-icons/action/flight-takeoff'
 
 function SubmitButton (props) {
   return (
-    <FlatButton id="new-password-submit" type="button">Go!</FlatButton>
+    <FloatingActionButton id="new-password-submit">
+      <ContentAdd />
+    </FloatingActionButton>
   )
 }
 
