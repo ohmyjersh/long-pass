@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const { resolve } = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -11,7 +12,7 @@ module.exports = {
   output: {
     filename: 'app.bundle.js',
     path: resolve(__dirname, 'build/js'),
-    publicPath: '/js'
+    publicPath: '/js/'
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -20,7 +21,7 @@ module.exports = {
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'build'),
-    publicPath: '/js'
+    publicPath: '/js/'
   },
   module: {
     rules: [
@@ -42,6 +43,12 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/index.ejs',
+      appMountId: 'react-app-root',
+      title: 'Long Pass',
+      filename: resolve(__dirname, 'build/index.html')
+    })
   ]
 }
