@@ -5,7 +5,14 @@ import SubmitButton from './SubmitButton'
 function Container (props) {
   return (
     <div>
-      <Header />
+      <Header
+        textContent='You need a long password'/>
+      <div
+        id='main-image'>
+        <img src='https://imgs.xkcd.com/comics/password_strength.png' />
+      </div>
+      <Header
+        textContent='Make me one'/>
       <SubmitButton />
     </div>
   )

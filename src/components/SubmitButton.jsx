@@ -17,7 +17,7 @@ class SubmitButton extends React.Component {
   }
   generatePassword () {
     let newPass = []
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
       newPass[i] = words[this.pickRandomValue(words)]
     }
     return newPass.join(' ')
@@ -28,11 +28,10 @@ class SubmitButton extends React.Component {
       content = this.generatePassword()
     }
     return (
-      <div
-        onClick={this.handleSubmitButtonClick}
-      >
+      <div>
         <FloatingActionButton
           id="new-password-submit"
+          onClick={this.handleSubmitButtonClick}
         >
           <ContentAdd />
         </FloatingActionButton>

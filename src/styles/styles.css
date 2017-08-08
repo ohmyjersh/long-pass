@@ -1,0 +1,23 @@
+
+/* Add CSS style here */
+
+body {
+  text-align: center;
+  font-family: 'Zilla Slab', serif;
+  font-size: 40px;
+  padding: 50px;
+}
+
+#main-image {
+  width: 33%;
+  margin: 0 auto;
+}
+
+#main-image img {
+  width: 100%;
+  height: auto;
+}
+
+#password-content {
+  padding: 25px;
+}
