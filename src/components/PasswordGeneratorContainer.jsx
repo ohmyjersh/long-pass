@@ -5,12 +5,14 @@ import words from 'an-array-of-english-words'
 import SubmitButton from './SubmitButton'
 import Header from './Header'
 import PasswordPresenter from './PasswordPresenter'
+import WordLengthField from './WordLengthField'
 
 class PasswordGeneratorContainer extends React.Component {
   constructor () {
     super()
-    this.state = {passwordContent: ''}
+    this.state = {passwordContent: '', passwordMaxWordLength: 1}
     this.handleSubmitButtonClick = this.handleSubmitButtonClick.bind(this)
+    this.handleMaxLengthInput = this.handleMaxLengthInput.bind(this)
   }
 
   pickRandomValue (array) {
@@ -19,14 +21,27 @@ class PasswordGeneratorContainer extends React.Component {
 
   generatePassword () {
     let newPass = []
+    console.log(this.state.passwordMaxWordLength)
+    const maxPassLength = this.state.passwordMaxWordLength
+    const filteredWords = words.filter(word => word.length <= maxPassLength)
     for (let i = 0; i < 4; i++) {
-      newPass[i] = words[this.pickRandomValue(words)]
+      newPass[i] = filteredWords[this.pickRandomValue(filteredWords)]
     }
     return newPass.join(' ')
   }
 
   handleSubmitButtonClick () {
-    this.setState({passwordContent: this.generatePassword()})
+    const newPass = this.generatePassword()
+    this.setState((prevState, props) => (
+      {passwordContent: newPass}
+    ))
+  }
+
+  handleMaxLengthInput (event) {
+    const maxLength = parseInt(event.target.value, 10)
+    this.setState((prevState, props) => (
+      {passwordMaxWordLength: maxLength}
+    ), this.handleSubmitButtonClick)
   }
 
   render () {
@@ -34,6 +49,9 @@ class PasswordGeneratorContainer extends React.Component {
       <div>
         <Header
           textContent='Make me one'/>
+        <WordLengthField
+          newSelectionHandler={this.handleMaxLengthInput}
+          value={this.state.passwordMaxWordLength}/>
         <SubmitButton
           clickHandler={this.handleSubmitButtonClick}/>
         <PasswordPresenter
