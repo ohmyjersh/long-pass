@@ -4,13 +4,15 @@
   "description": "Generate a random long password",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Flesh this out later. Don't be lazy'",
-    "start": "node server.js",
-    "start:dev": "nodemon server.js",
-    "start:wpack": "npm run wp:server",
-    "launch": "chrome http://127.0.0.1:8081/",
+    "dev": "webpack-dev-server",
     "wp": "webpack",
-    "wp:server": "webpack-dev-server"
+    "build": "webpack",
+    "validate": "npm run lint && npm t",
+    "build:prod": "webpack -p",
+    "start": "node server.js",
+    "test": "echo 'Flesh this out later. Don't be lazy'",
+    "lint": "eslint src/**/*.jsx",
+    "launch": "chrome http://127.0.0.1:8081/"
   },
   "author": "Christian Danielsen",
   "license": "ISC",
