@@ -4,13 +4,13 @@
 body {
   text-align: center;
   font-family: 'Zilla Slab', serif;
-  font-size: 40px;
-  padding: 50px;
+  font-size: 30px;
 }
 
 #main-image {
-  width: 33%;
+  width: 50%;
   margin: 0 auto;
+  padding: 20px
 }
 
 #main-image img {
@@ -19,5 +19,7 @@ body {
 }
 
 #password-content {
-  padding: 25px;
+  padding: 50px;
+  font-weight: bold;
+  font-size: 80px;
 }

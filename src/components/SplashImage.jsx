@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function SplashImage (props) {
   return (
-    <div>
+    <div id="main-image">
       <img src={props.imageUrl} />
     </div>
   )

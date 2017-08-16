@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from './Container'
+import StateContainer from './StateContainer'
 import { MuiThemeProvider, createMuiTheme, createPalette } from 'material-ui/styles'
 import { blue, red } from 'material-ui/colors'
 
@@ -13,7 +13,7 @@ const THEME = createMuiTheme({
 function App (props) {
   return (
     <MuiThemeProvider theme={THEME}>
-      <Container />
+      <StateContainer />
     </MuiThemeProvider>
   )
 }
