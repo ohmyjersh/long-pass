@@ -23,3 +23,21 @@ body {
   font-weight: bold;
   font-size: 80px;
 }
+
+#new-password-submit {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+#banner {
+  font-size: 50px;
+}
+
+#banner h1 {
+  margin-bottom: 30px
+}
+
+#slider-max-word-length {
+  width: 75%
+}

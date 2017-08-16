@@ -55,31 +55,32 @@ class StateContainer extends React.Component {
             md={12}>
             <div>
               <Header
+                id="banner"
                 textContent='You Need A Long Password'/>
-              <hr />
+              <SplashImage
+                id="main-image"
+                imageUrl='https://imgs.xkcd.com/comics/password_strength.png'/>
+              <SubmitButton
+                id="new-password-submit"
+                clickHandler={this.handleSubmitButtonClick}/>
             </div>
           </Grid>
         </Grid>
-        <Grid container>
+        <Grid container spacing={8}>
           <Grid
             item
             id="control-panel"
-            md={4}>
+            md={6}>
             <div>
               <WordLengthField
                 newSelectionHandler={this.handleMaxLengthInput}
                 value={this.state.passwordMaxWordLength}/>
             </div>
-            <div>
-              <SubmitButton
-                clickHandler={this.handleSubmitButtonClick}/>
-            </div>
           </Grid>
           <Grid
             item
-            md={8}>
-            <SplashImage
-              imageUrl='https://imgs.xkcd.com/comics/password_strength.png'/>
+            md={6}>
+
             <PasswordPresenter
               passwordContent={this.state.passwordContent}/>
           </Grid>

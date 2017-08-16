@@ -10,7 +10,7 @@ function SubmitButton (props) {
       <Button
         fab
         color="primary"
-        id="new-password-submit"
+        id={props.id}
         onClick={props.clickHandler}>
         <Build />
       </Button>
@@ -19,7 +19,8 @@ function SubmitButton (props) {
 }
 
 SubmitButton.propTypes = {
-  clickHandler: PropTypes.func
+  clickHandler: PropTypes.func,
+  id: PropTypes.string
 }
 
 export default SubmitButton
