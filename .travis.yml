@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "8"
 
-install: npm i
+install: npm i -dd
 script: npm run validate && npm run build:prod
