@@ -9,7 +9,7 @@
     "validate": "npm run lint && npm t",
     "build:prod": "webpack -p",
     "start": "node server.js",
-    "test": "echo Flesh this out later. Don't be lazy",
+    "test": "echo \"Flesh this out later. Don't be lazy\"",
     "lint": "eslint src/**/*.jsx",
     "launch": "chrome http://127.0.0.1:8081/"
   },

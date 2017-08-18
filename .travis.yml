@@ -3,6 +3,4 @@ node_js:
   - "8"
 
 install: npm i
-script:
-  - npm run validate || travis_terminate 1
-  - npm run build:prod || travis_terminate 1
+script: npm run validate && npm run build:prod
