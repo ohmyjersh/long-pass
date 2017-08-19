@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '8'
+install: npm i -dd
+script: npm run validate && npm run build:prod
+deploy:
+  provider: heroku
+  app: long-pass
+  run: "npm start"
+  api_key:
+    secure: WHQi1ArNNhFN1Bl5n0oJV3HkbYWAfz2aJJPx59vSHp5v4xzlVEcCuLf55eXt85W3yO/DQBgQ7z4Z83xWCllC5jcGrkAElfw9xMHa1wPJvDFkvRjVcFfa2upXnviibl6Re0F8DH5PwCh73RMIeYW3zWoiBPOTJt8J0Sqzf4akZNLh8vpYD1v6dSZoqUfsxL+/Vj1WE5GlC2JQkv7dhKLn7/0Tio5Fm4gaPK4w0inR1DNGuA/XYHbsToWvT/SCDCqaCpmWbh23cnb8W0yXhreefwyn9PITdJSPdiEWxSvyDlXXkjilpp6w89vK2pBoiZgA/3vrLJrdev7Ap+OCV9zqk+hpJYAN9VNgzfqJWyuBJ2TBZ7iTfMA4JMpEYgpFFYBxWznkBW0HAcimNqE7zNLS53o7xgiOQGfhNpmg4qb6PtP8hwsfJ6NRW78ne+JW7TywyIJpAbyDCXqrYHfQpul9zwWVdbW3+Lmt55LPXh/x90rM6EiwZ7sjJ8mLYh6fjUcFhyb8d56yTw/mx6ARhWV2AnMH0oMb8AND5nTtYvdYB5I2+7eeGODxe5r3+m2DIyfgtWYtI8xS0geLgyJjO21YOJG6i67pg2sepJpsrqLg+KpGGI664WWKNG/Xtfgf+A2w3MDIWgoDtGeAhr1/GpN4/DcQjslSKtoOyTITDVmvowo=

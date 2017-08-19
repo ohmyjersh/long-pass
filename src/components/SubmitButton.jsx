@@ -1,22 +1,26 @@
 import React from 'react'
-import FloatingActionButton from 'material-ui/FloatingActionButton'
-import ContentAdd from 'material-ui/svg-icons/action/flight-takeoff'
+import Button from 'material-ui/Button'
+import Build from 'material-ui-icons/Build'
+
 import PropTypes from 'prop-types'
 
 function SubmitButton (props) {
   return (
     <div>
-      <FloatingActionButton
-        id="new-password-submit"
+      <Button
+        fab
+        color="primary"
+        id={props.id}
         onClick={props.clickHandler}>
-        <ContentAdd />
-      </FloatingActionButton>
+        <Build />
+      </Button>
     </div>
   )
 }
 
 SubmitButton.propTypes = {
-  clickHandler: PropTypes.func
+  clickHandler: PropTypes.func,
+  id: PropTypes.string
 }
 
 export default SubmitButton

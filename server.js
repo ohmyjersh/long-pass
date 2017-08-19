@@ -11,7 +11,6 @@ app.use(express.static(assets))
 
 // Top level route
 app.get('/', (request, response) => {
-  console.log('Servin it up!')
   response.sendFile(join(__dirname, '/views/index.html'))
 })
 
@@ -20,5 +19,5 @@ app.listen(PORT, (err) => {
   if (err) {
     return console.log('Something bad happened', err)
   }
-  console.log(`server is listening on ${PORT}`)
+  console.log(`Huzzah! Server is listening at http://localhost:${PORT}`)
 })
