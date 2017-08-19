@@ -11,7 +11,7 @@ app.use(express.static(assets))
 
 // Top level route
 app.get('/', (request, response) => {
-  response.sendFile(join(__dirname, '/views/index.html'))
+  response.sendFile(join(__dirname, '/index.html'))
 })
 
 // Server listener

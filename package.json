@@ -2,7 +2,7 @@
   "name": "long-pass",
   "version": "0.1.0",
   "description": "Generate a random long password",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
