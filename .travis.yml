@@ -1,7 +1,7 @@
 language: node_js
 node_js:
 - '8'
-install: npm i -dd
+install: npm i
 script: npm run validate && npm run build:prod
 deploy:
   provider: heroku
