@@ -1,5 +1,5 @@
 import React from 'react'
-import words from 'an-array-of-english-words'
+import words from 'more-words'
 
 import Header from './Header'
 import SplashImage from './SplashImage'
@@ -39,6 +39,7 @@ class StateContainer extends React.Component {
 
   handleSubmitButtonClick () {
     const newPass = this.generatePassword()
+    scroll(0, 1000)
     this.setState((prevState, props) => (
       {passwordContent: newPass}
     ))
@@ -100,7 +101,7 @@ class StateContainer extends React.Component {
             md={6}>
             <div>
               <SliderFilter
-                sliderTitle='Max Password Length'
+                title='Max Password Length'
                 id='slider-max-password-length'
                 min={12}
                 max={28}
@@ -108,7 +109,7 @@ class StateContainer extends React.Component {
                 value={this.state.passwordMaxLength}/>
 
               <SliderFilter
-                sliderTitle='Max Individual Word Length'
+                title='Max Individual Word Length'
                 id='slider-max-word-length'
                 min={3}
                 max={this.state.passwordMaxWordLengthPossible}

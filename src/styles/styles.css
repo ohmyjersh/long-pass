@@ -7,10 +7,13 @@ body {
   font-size: 30px;
 }
 
+#banner {
+  font-size: 2em
+}
+
 #main-image {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
-  padding: 20px
 }
 
 #main-image img {
@@ -30,18 +33,10 @@ body {
   margin: 10px;
 }
 
-#banner {
-  font-size: 50px;
-}
-
-#banner h1 {
-  margin-bottom: 30px
-}
-
 #slider-max-word-length {
   width: 75%
 }
 
-#slider-max-length {
+#slider-max-password-length {
   width: 75%
 }

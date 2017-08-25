@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 function SliderFilter (props) {
   return (
     <div>
-      <h2>{props.sliderTitle}</h2>
+      <h2>{props.title}</h2>
       <div>
         <input
           id={props.id}
@@ -22,7 +22,7 @@ function SliderFilter (props) {
 }
 
 SliderFilter.propTypes = {
-  sliderTitle: PropTypes.string,
+  title: PropTypes.string,
   id: PropTypes.string,
   min: PropTypes.number,
   max: PropTypes.number,

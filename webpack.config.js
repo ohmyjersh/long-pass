@@ -13,8 +13,8 @@ module.exports = {
   ],
   output: {
     filename: 'app.bundle.js',
-    path: resolve(__dirname, 'build/js'),
-    publicPath: '/js/'
+    path: resolve(__dirname, 'build'),
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -23,7 +23,7 @@ module.exports = {
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'build'),
-    publicPath: '/js/'
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -44,8 +44,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          use: 'css-loader',
-          filename: './build/css/styles.css'
+          use: 'css-loader'
         })
       }
     ]
@@ -53,7 +52,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new ExtractTextPlugin('../css/styles.css'),
+    new ExtractTextPlugin({
+      filename: 'css/styles.bundle.css'
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
       appMountId: 'react-app-root',
