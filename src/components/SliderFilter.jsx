@@ -4,18 +4,18 @@ import PropTypes from 'prop-types'
 function SliderFilter (props) {
   return (
     <div>
-      <h2>{props.title}</h2>
+      <h3>{props.title}</h3>
       <div>
         <input
           id={props.id}
           type="range"
           min={props.min}
           max={props.max}
-          step='1'
+          step="1"
           onChange={props.newSelectionHandler}
-          value={props.value}>
-        </input>
-        <h2>{props.value}</h2>
+          value={props.value}
+        />
+        <h3>{props.value}</h3>
       </div>
     </div>
   )
