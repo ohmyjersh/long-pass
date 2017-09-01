@@ -3,16 +3,15 @@ import PropTypes from 'prop-types'
 
 function Header (props) {
   return (
-    <div
-      id={props.id}>
-      <h1>{props.textContent}</h1>
+    <div>
+      <div className={props.className}>{props.textContent}</div>
     </div>
   )
 }
 
 Header.propTypes = {
   textContent: PropTypes.string,
-  id: PropTypes.string
+  className: PropTypes.string
 }
 
 export default Header
