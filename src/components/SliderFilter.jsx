@@ -1,25 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function SliderFilter (props) {
-  return (
+const SliderFilter = ({title, id, min, max, newSelectionHandler, value}) => (
     <div>
-      <h3>{props.title}</h3>
+      <h3>{title}</h3>
       <div>
         <input
-          id={props.id}
+          id={id}
           type="range"
-          min={props.min}
-          max={props.max}
+          min={min}
+          max={max}
           step="1"
-          onChange={props.newSelectionHandler}
-          value={props.value}
+          onChange={newSelectionHandler}
+          value={value}
         />
-        <h3>{props.value}</h3>
+        <h3>{value}</h3>
       </div>
     </div>
   )
-}
 
 SliderFilter.propTypes = {
   title: PropTypes.string,

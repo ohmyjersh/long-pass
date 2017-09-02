@@ -1,13 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Header (props) {
-  return (
-    <div>
-      <div className={props.className}>{props.textContent}</div>
-    </div>
-  )
-}
+const Header = ({className, textContent}) => <div className={className}>{textContent}</div>
 
 Header.propTypes = {
   textContent: PropTypes.string,
