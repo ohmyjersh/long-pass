@@ -4,15 +4,13 @@
   "description": "Generate a random long password",
   "main": "server.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "validate": "npm run lint && npm t",
-    "build:prod": "webpack -p",
-    "start": "npm run build && node server.js",
-    "test": "echo \"Flesh this out later. Don't be lazy\"",
     "lint": "eslint src/**/*.jsx",
-    "prettify": "prettier src/**/*.jsx --write --single-quote=true",
-    "launch": "chrome http://127.0.0.1:8081/"
+    "prettify": "prettier src/**/*.jsx --write --single-quote=true"
   },
   "author": "Christian Danielsen",
   "license": "ISC",
@@ -35,6 +33,7 @@
     "nodemon": "1.11.0",
     "prettier": "1.6.1",
     "react-hot-loader": "3.0.0-beta.7",
+    "react-scripts": "^1.0.12",
     "style-loader": "0.18.2",
     "webpack": "3.4.1",
     "webpack-dev-server": "2.6.1"

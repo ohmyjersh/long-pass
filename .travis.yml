@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '8'
 install: npm i
-script: npm run validate && npm run build:prod
+script: npm run validate && npm run build
 deploy:
   provider: heroku
   app: long-pass

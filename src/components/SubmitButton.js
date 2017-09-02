@@ -4,15 +4,13 @@ import Lock from 'material-ui-icons/Lock'
 
 import PropTypes from 'prop-types'
 
-function SubmitButton (props) {
-  return (
+const SubmitButton  = ({id, clickHandler}) => (
     <div>
-      <Button fab color="primary" id={props.id} onClick={props.clickHandler}>
+      <Button fab color="primary" id={id} onClick={clickHandler}>
         <Lock style={{ width: 40, height: 40 }} />
       </Button>
     </div>
   )
-}
 
 SubmitButton.propTypes = {
   clickHandler: PropTypes.func,

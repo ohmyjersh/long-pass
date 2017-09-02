@@ -6,7 +6,7 @@ import SplashImage from './SplashImage'
 import Grid from 'material-ui/Grid'
 import SubmitButton from './SubmitButton'
 import PasswordPresenter from './PasswordPresenter'
-import SliderFilter from './SliderFilter.jsx'
+import SliderFilter from './SliderFilter'
 
 class StateContainer extends React.Component {
   constructor () {
@@ -17,21 +17,13 @@ class StateContainer extends React.Component {
       passwordMaxWordLengthPossible: 5,
       passwordMaxWordLengthCurrent: 4
     }
-    this.handleSubmitButtonClick = this.handleSubmitButtonClick.bind(this)
-    this.handleMaxWordLengthInput = this.handleMaxWordLengthInput.bind(this)
-    this.handleMaxPasswordLengthInput = this.handleMaxPasswordLengthInput.bind(
-      this
-    )
-    this.handleUpdatingPasswordLength = this.handleUpdatingPasswordLength.bind(
-      this
-    )
   }
 
-  pickRandomValue (array) {
+  pickRandomValue = (array) => {
     return Math.floor(Math.random() * array.length)
   }
 
-  generatePassword () {
+  generatePassword = () => {
     let newPass = []
     const maxPassLength = this.state.passwordMaxWordLengthCurrent
     const filteredWords = words.filter(word => word.length <= maxPassLength)
@@ -41,13 +33,13 @@ class StateContainer extends React.Component {
     return newPass
   }
 
-  handleSubmitButtonClick () {
+  handleSubmitButtonClick = () => {
     const newPass = this.generatePassword()
     window.scroll({ left: 0, top: 1000, behavior: 'smooth' })
     this.setState((prevState, props) => ({ passwordContent: newPass }))
   }
 
-  handleMaxWordLengthInput (event) {
+  handleMaxWordLengthInput = (event) => {
     const currentValue = parseInt(event.target.value, 10)
     this.setState(
       (prevState, props) => ({
@@ -57,7 +49,7 @@ class StateContainer extends React.Component {
     )
   }
 
-  handleMaxPasswordLengthInput (event) {
+  handleMaxPasswordLengthInput = (event) => {
     const maxLength = parseInt(event.target.value, 10)
     this.setState(
       (prevState, props) => ({
@@ -67,7 +59,7 @@ class StateContainer extends React.Component {
     )
   }
 
-  handleUpdatingPasswordLength () {
+  handleUpdatingPasswordLength = () => {
     const newMaxWordLength = Math.floor(this.state.passwordMaxLength / 4)
     this.setState((prevState, props) => {
       const adjustedMaxWordLength =
