@@ -9,14 +9,11 @@ import PasswordPresenter from './PasswordPresenter'
 import SliderFilter from './SliderFilter'
 
 class StateContainer extends React.Component {
-  constructor () {
-    super()
-    this.state = {
+    state = {
       passwordContent: [],
       passwordMaxLength: 20,
       passwordMaxWordLengthPossible: 5,
       passwordMaxWordLengthCurrent: 4
-    }
   }
 
   pickRandomValue = (array) => {
